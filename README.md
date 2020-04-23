@@ -4,8 +4,8 @@
 
 ### *Pré-requis* ###
 * une clé ssh publique 
-* compte [github](https://github.com/)
-* compte [gitlab](https://gitlab.com/)
+* un compte [github](https://github.com/)
+* un compte [gitlab](https://gitlab.com/)
  
 ### *mise à jour d'un repo fork* ###
 * Update de votre [repo](https://rick.cogley.info/post/update-your-forked-repository-directly-on-github/) 
@@ -16,7 +16,7 @@
 
 >*1.* Créer un répertoire de destination de la DB (data + db) 
 >
->```mkdir /home/data/db```
+>```mkdir ~/data/db```
 >
 
 >*2.* Ajout d’un répertoire pour le path 
@@ -25,15 +25,17 @@
 >
 
 >*3.* On indique le chemin vers le fichier de l’install mongo 
+>
 >```export PATH=$PATH:/home/usr/opt/mongodb-linux-x86_64-ubuntu1804-4.2.3/bin/``` 
 >
 
 >*4.* Si le mongo n’est pas dans le path, toutes les commandes devront être précédées par le chemin vers le fichier d’installation) 
+>
 >```usr/opt/mongodb-linux-x86_64-ubuntu1804-4.2.3/bin/mongod``` 
  
 > *5.* On indique au daemon mongo le dossier vers lequel placer la base de données.
 >
->``mongod --dbpath /home/data/db``  
+>``sudo mongod --dbpath ~/data/db``  
 
 
 
@@ -81,5 +83,13 @@ Si problème de droits lors du lancement de strapi:
 >* Datas Ghost suivre le [README](https://github.com/TonyCois/ubeers-gatsby/tree/step-1-1) de Tony 
 >* Datas de Strapi suivre le [README](https://github.com/TonyCois/ubeers-gatsby/tree/step-2-2) de Tony
 
+## *Déploiement de Strapi sur Clever Cloud* ##
+* Suivre le [README](https://github.com/TonyCois/ubeers-deploy/blob/master/clevercloud/strapi.md) de Tony
 
-++
+## *Déploiement de Ghost sur Clever Cloud* ##
+* Suivre le [README](https://github.com/TonyCois/ubeers-deploy/blob/master/clevercloud/ghost.md) de Tony
+
+## *Déploiement de Gatsby sur Clever Cloud* ##
+*  Suivre le [README](https://github.com/TonyCois/ubeers-deploy/blob/master/clevercloud/gatsby.md) de Tony
+*  Déploiement de Gatsby without ghost suivre le [README](https://github.com/TonyCois/ubeers-gatsby/tree/step-2-8-without-ghost) de Tony et faire un checkout de la Step-2-8-without-ghost pour récupérer les modifs du ``config.js`` et du code relatif à Ghost.
+ suivi d'un petit ``npm install``  et retour sur [README](https://github.com/TonyCois/ubeers-deploy/blob/master/clevercloud/gatsby.md) de Tony sans tenir compte des ajouts de variables pour ghost.
